@@ -1,0 +1,4 @@
+api/test_outputs/*
+.ipynb_checkpoints
+api/stovpy/__pycache__/*
+api/stovpy/.ipynb_checkpoints/*

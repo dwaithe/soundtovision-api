@@ -1,0 +1,336 @@
+{"version":1.0,
+	"ColorOverlayFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Color Overlay Filter",
+		"label":["filter"],
+		"fn": "ColorOverlayFilter",
+		"active":false,
+		"params":{
+			"alpha":{"type":"range","name":"Alpha","default":1,"min":0,"max":1,"step":0.01},
+			"color":{"type":"color","name":"Color","default":"FFFFFF","tooltip":""}
+		}
+	},
+	"GlitchFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Glitch Filter",
+		"label":["filter"],
+		"fn": "GlitchFilter",
+		"active":false,
+		"params":{
+			"average":{"type":"checkbox","name":"Average","default":false,"tooltip":""},
+			"blue":{"type":"dbl_range","name":["Blue x","Blue y"],"default":[0.0,0.0],"min":0,"max":4000,"step":0.01,"dynamic":[false,false],"signal":[0,0],"cutoff":[0,0],"gain":[1,1],"tooltip":""},
+			"red":{"type":"dbl_range","name":["Red x","Red y"],"default":[0.0,0.0],"min":0,"max":4000,"step":0.01,"dynamic":[false,false],"signal":[0,0],"cutoff":[0,0],"gain":[1,1],"tooltip":""},
+			"green":{"type":"dbl_range","name":["Green x","Green y"],"default":[0.0,0.0],"min":0,"max":4000,"step":0.01,"dynamic":[false,false],"signal":[0,0],"cutoff":[0,0],"gain":[1,1],"tooltip":""},
+			"minSize":{"type":"range","name":"Min Size","default":8,"min":0,"max":35,"step":1},
+			"offset":{"type":"range","name":"Offset","default":100,"min":0,"max":1000,"step":1},
+			"sampleSize":{"type":"range","name":"Sample Size","default":512,"min":0,"max":1024,"step":1},
+			"slices":{"type":"range","name":"Slices","default":5,"min":0,"max":50,"step":1},
+			"seed":{"type":"seed","name":"seed","default":5,"min":0,"max":1024,"step":1}
+			
+			}
+	},
+	"AdjustmentFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Adjustment Filter",
+		"fn": "AdjustmentFilter",
+		"label":["filter"],
+		"active":false,
+		"params":{
+			"gamma":{"type":"range","name":"Gamma","default":1,"min":0,"max":5,"step":0.01},
+			"saturation":{"type":"range","name":"Saturation","default":1,"min":0,"max":5,"step":0.01},
+			"contrast":{"type":"range","name":"Contrast","default":1,"min":0,"max":5,"step":0.01},
+			"brightness":{"type":"range","name":"Brightness","default":1,"min":0,"max":5,"step":0.01},
+			"red":{"type":"range","name":"Red","default":1,"min":0,"max":5,"step":0.01},
+			"green":{"type":"range","name":"Green","default":1,"min":0,"max":5,"step":0.01},
+			"blue":{"type":"range","name":"Blue","default":1,"min":0,"max":5,"step":0.01},
+			"alpha":{"type":"range","name":"Alpha","default":1,"min":0,"max":1,"step":0.01}
+		}
+	},
+	"AdvancedBloomFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Advanced Bloom Filter",
+		"label":["filter"],
+		"fn":"AdvancedBloomFilter",
+		"active":false,
+		"params":{
+			"threshold":{"type":"range","name":"Threshold","default":0.5,"min":0.1,"max":0.9,"step":0.01},
+			"bloomScale":{"type":"range","name":"Bloom scale","default":1,"min":0.5,"max":1.5,"step":0.01},
+			"brightness":{"type":"range","name":"Brightness","default":1,"min":0.5,"max":1.5,"step":0.01},
+			"blur":{"type":"range","name":"Blur","default":8,"min":0,"max":20,"step":0.01},
+			"quality":{"type":"range","name":"Quality","default":4,"min":1,"max":20,"step":0.01},
+			"kernels":{"type":"range","name":"Kernels","default":1,"min":0,"max":5,"step":0.01},
+			"pixelSize":{"type":"range","name":"Pixel Size","default":1,"min":0,"max":5,"step":0.01},
+			"resolution":{"type":"range","name":"Resolution","default":1,"min":0,"max":1,"step":0.01}
+		}
+	},
+	"AsciiFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Ascii Filter",
+		"label":["filter"],
+		"fn":"AsciiFilter",
+		"active":false,
+		"params":{
+			"size":{"type":"range","name":"Size","default":8,"min":0,"max":20,"step":0.01,"dynamic":false,"signal":0,"cutoff":0,"gain":1,"tooltip":"The pixel size used by the filter"}
+		}
+	},
+	"GodrayFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "God Ray Filter",
+		"label":["filter"],
+		"fn":"GodrayFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":99999},
+			"gain":{"type":"range","name":"Gain","default":0.5,"min":0.0,"max":1.0,"step":0.01,"dynamic":false,"signal":0,"cutoff":0,"gain":1,"tooltip":""},
+			"lacunarity":{"type":"range", "name":"Lacunarity","default":2.5,"min":0,"max":5,"step":0.01,"dynamic":false,"signal":0,"cutoff":0,"gain":1,"tooltip":""},
+			"alpha":{"type":"range","name":"Alpha","default":1,"min":0,"max":1,"step":0.01,"dynamic":false,"signal":0,"cutoff":0,"gain":1,"tooltip":""},
+			"angle":{"type":"range","name":"Angle","default":30,"min":-60,"max":60,"step":0.01,"dynamic":false,"signal":0,"cutoff":0,"gain":1,"tooltip":""},
+			"parallel":{"type":"checkbox","name":"Parallel","default":true,"tooltip":""},
+			"center":{"type":"dbl_range","label":["x","y"],"dict":true, "name":["Center x","Center y"],"default":[0,0],"min":0,"max":4000,"step":1,"dynamic":[false,false],"signal":[0,0],"cutoff":[0,0],"gain":[1,1],"tooltip":""}
+		}
+	},
+	"BulgePinchFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Bulge Pinch Filter",
+		"label":["filter"],
+		"fn":"BulgePinchFilter",
+		"active":false,
+		"params":{
+			"radius":{"type":"range","name":"Radius","default":100,"min":0.0,"max":500,"step":0.01},
+			"strength":{"type":"range", "name":"Strength","default":1,"min":-1,"max":1,"step":0.01},	
+			"center":{"type":"dbl_range","name":["Center x","Center y"],"default":[0.5,0.5],"min":0,"max":1,"step":0.01}
+		}	
+	},
+	"CRTFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "CRT Filter",
+		"label":["filter"],
+		"fn":"CRTFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time"},
+			"curvature":{"type":"range","name":"Curvature","default":1,"min":0.0,"max":10,"step":0.01},
+			"lineWidth":{"type":"range", "name":"Line Width","default":1,"min":0,"max":5,"step":0.01},	
+			"lineContrast":{"type":"range","name":"Line Contrast","default":0.25,"min":0,"max":1,"step":0.01},
+			"verticalLine":{"type":"checkbox","name":"Vertical Line","default":false,"step":0.01},
+			"noise":{"type":"range","name":"Noise","default":0.3,"min":0,"max":1,"step":0.01},
+			"noiseSize":{"type":"range","name":"Noise Size","default":1.0,"min":0,"max":10,"step":0.01},
+			"vignetting":{"type":"range","name":"Vignetting","default":0.3,"min":0,"max":1,"step":0.01},
+			"vignettingAlpha":{"type":"range","name":"Vignetting Alpha","default":1.0,"min":0,"max":1,"step":0.01},
+			"vignettingBlur":{"type":"range","name":"Vignetting Blur","default":0.3,"min":0,"max":1,"step":0.01}
+		}
+	},
+	"ShockwaveFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Shockwave Filter",
+		"label":["filter"],
+		"fn":"ShockwaveFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":1.0,"dynamic":false},
+			"amplitude":{"type":"range","name":"Amplitude","default":30,"min":1.0,"max":100,"step":0.01},
+			"wavelength":{"type":"range", "name":"Wavelength","default":160,"min":0,"max":400,"step":0.01},	
+			"brightness":{"type":"range","name":"Brightness","default":1,"min":2,"max":400,"step":0.01},
+			"speed":{"type":"range","name":"Speed","default":500,"min":1,"max":4000,"step":0.01},		
+			"radius":{"type":"range","name":"Radius","default":-1,"min":-1,"max":2000,"step":0.01},
+			"center":{"type":"dbl_range","name":["Center x","Center y"],"default":[0.5,0.5],"min":0,"max":1000,"step":0.01}	
+		}
+	},
+	"PixelateFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Pixelate Filter",
+		"label":["filter"],
+		"fn":"PixelateFilter",
+		"active":false,
+		"params":{
+			"size":{"type":"dbl_range","name":["Size x","Size y"],"default":[10,10],"min":4.0,"max":40,"step":1}
+		}
+	},
+
+	"ExtractFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Extract Filter",
+		"label":["filter"],
+		"fn":"ExtractFilter",
+		"active":false,
+		"params":{
+			"keyColor":{"type":"color","name":"KeyColor","default":[0,0,0],"tooltip":""},
+			"similarity":{"type":"range","name":"Similarity","default":0.4,"min":0.0,"max":1,"step":0.001},
+			"smoothness":{"type":"range","name":"Smoothness","default":0.1,"min":0.0,"max":1,"step":0.001},
+			"spill":{"type":"range","name":"Spill","default":0.1,"min":0.0,"max":1,"step":0.001}
+		}
+	},
+	"ChromaFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Chroma Filter",
+		"label":["filter"],
+		"fn":"ChromaFilter",
+		"active":false,
+		"params":{
+			"keyColor":{"type":"color","name":"KeyColor","default":[0,1.0,0],"tooltip":""},
+			"similarity":{"type":"range","name":"Similarity","default":0.4,"min":0.0,"max":1,"step":0.001},
+			"smoothness":{"type":"range","name":"Smoothness","default":0.1,"min":0.0,"max":1,"step":0.001},
+			"spill":{"type":"range","name":"Spill","default":0.1,"min":0.0,"max":1,"step":0.001}
+		}
+	},
+	"CoarseNoiseFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Coarse Noise Filter",
+		"label":["filter"],
+		"fn":"CoarseNoiseFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999}
+			}
+	},
+	"InvertFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Invert Filter",
+		"label":["filter"],
+		"fn":"InvertFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999}
+			}
+	},
+	"CycleThresholdShader":{
+		"idNum":0,
+		"type":"filter",
+		"name": "cycle Threshold Shader",
+		"label":["filter"],
+		"fn":"CycleThresholdShader",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999}
+			}
+	},
+	"RadialWaveShader":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Radial Wave Filter",
+		"label":["filter"],
+		"fn":"RadialWaveFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999},
+			"amount":{"type":"range","name":"Amount","default":1,"min":0.0,"max":5,"step":0.1},
+			"multipler":{"type":"range","name":"Multipler","default":1,"min":0.0,"max":15,"step":0.1},
+			"center":{"type":"dbl_range","name":["Center x","Center y"],"default":[0.5,0.5],"min":0,"max":1,"step":0.01}
+			}
+	},
+	"ZoomFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Zoom Filter",
+		"label":["filter"],
+		"fn":"ZoomFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999},
+			"zoom_factor":{"type":"range","name":"Zoom Factor","default":0.5,"min":0.0,"max":5,"step":0.1}
+			}
+	},
+	"KaleidoscopeFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Kaleidoscope Filter",
+		"label":["filter"],
+		"fn":"KaleidoscopeFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time","default":0,"min":0,"max":999},
+			"sides":{"type":"range","name":"Sides","default":5,"min":0.0,"max":50,"step":1},
+			"angle":{"type":"range","name":"Angles","default":0.5,"min":0.0,"max":90,"step":0.1}
+			}
+	},
+	"NoiseFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Noise Filter",
+		"label":["filter"],
+		"fn":"NoiseFilter",
+		"active":false,
+		"params":{
+			"noise":{"type":"range","name":"Noise","default":0.5,"min":0.0,"max":1,"step":0.01},
+			"seed":{"type":"random"}
+			}
+	},
+	"ReflectionFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Reflection Filter",
+		"label":["filter"],
+		"fn":"ReflectionFilter",
+		"active":false,
+		"params":{
+			"time":{"type":"time"},
+			"mirror":{"type":"checkbox","name":"Mirror","default":false},
+			"boundary":{"type":"range","name":"Boundary","default":0.5,"min":0.0,"max":1,"step":0.001},
+			"amplitude":{"type":"dbl_range","name":["Ampl. start","Ampl. end"],"default":[0,20],"min":0.0,"max":20,"step":0.1},
+			"waveLength":{"type":"dbl_range","name":["Wavel. start","Wavel. end"],"default":[30,100],"min":0.0,"max":200,"step":0.1},
+			"alpha":{"type":"dbl_range","name":["Alpha. start","Alpha. end"],"default":[1,1],"min":0.0,"max":1,"step":0.1}
+			}
+	},
+	"BlurFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Blur Filter",
+		"label":["filter"],
+		"fn":"BlurFilter",
+		"active":false,
+		"params":{
+			"blur":{"type":"range","name":"Strength","default":8,"min":0.0,"max":50,"step":1},
+			"quality":{"type":"range","name":"Quality","default":1,"min":0.0,"max":30,"step":1},
+			"resolution":{"type":"range","name":"Resolution","default":2,"min":0.0,"max":5,"step":1}		
+		}
+	},
+	"RGBSplitFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "RGB Split Filter",
+		"label":["filter"],
+		"fn":"RGBSplitFilter",
+		"active":false,
+		"params":{
+			"red":{"type":"dbl_range","name":["Red x","Red y"],"default":[0,0],"min":-50,"max":50,"step":1},
+			"green":{"type":"dbl_range","name":["Green x","Green y"],"default":[0,0],"min":-50,"max":50,"step":1},
+			"blue":{"type":"dbl_range","name":["Blue x","Blue y"],"default":[0,0],"min":-50,"max":50,"step":1}
+		}
+	},
+	"DotFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Dot Filter",
+		"label":["filter"],
+		"fn":"DotFilter",
+		"active":false,
+		"params":{
+			"scale":{"type":"range","name":"Scale","default":1,"min":0.0,"max":50,"step":1},
+			"angle":{"type":"range","name":"Angle","default":5,"min":0.0,"max":180,"step":1}
+				}
+	},"TransitionFilter":{
+		"idNum":0,
+		"type":"filter",
+		"name": "Transition Filter",
+		"label":["filter"],
+		"fn":"TransitionFilter",
+		"active":false,
+		"params":{
+			"nextImage":{"type":"asset","name":"Next Image","default":null,"dynamic":false,"tooltip":""},
+			"dispFactor":{"type":"range","name":"Disperion Factor","default":0,"min":0.0,"max":1,"step":0.01}
+		}
+	}}
